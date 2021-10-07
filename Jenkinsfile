@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    parameters {
+  choice choices: ['dev', 'main', 'stage'], description: 'choose branch name', name: 'branch'
+        }
     stages{
         stage("demo"){
             steps{
